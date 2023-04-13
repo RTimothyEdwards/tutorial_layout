@@ -1,0 +1,45 @@
+** sch_path: /usr/share/pdk/sky130A/libs.tech/xschem/sky130_tests/zero_opamp.sch
+.subckt zero_opamp PLUS MINUS EN_N VSS VCC DIFFOUT ADJ
+*.PININFO PLUS:I MINUS:I EN_N:I VSS:I VCC:I DIFFOUT:O ADJ:I
+XM4 net6 EN_N VCC VCC sky130_fd_pr__pfet_01v8 L=8 W=2 nf=1 ad='W * 0.29' as='W * 0.29' pd='W + 2 * 0.29'
++ ps='W + 2 * 0.29' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1
+XM18 G2 G2 VSS VSS sky130_fd_pr__nfet_01v8_lvt L=4 W=2 nf=1 ad='W * 0.29' as='W * 0.29' pd='2*(W + 0.29)'
++ ps='2*(W + 0.29)' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1
+XM2 G1 G1 VSS VSS sky130_fd_pr__nfet_01v8_lvt L=4 W=2 nf=1 ad='W * 0.29' as='W * 0.29' pd='2*(W + 0.29)'
++ ps='2*(W + 0.29)' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1
+XM20 G2 PLUS net7 VCC sky130_fd_pr__pfet_01v8_lvt L=2 W=8 nf=1 ad='W * 0.29' as='W * 0.29' pd='2*(W + 0.29)'
++ ps='2*(W + 0.29)' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1
+XM3 G1 MINUS net8 VCC sky130_fd_pr__pfet_01v8_lvt L=2 W=8 nf=1 ad='W * 0.29' as='W * 0.29' pd='2*(W + 0.29)'
++ ps='2*(W + 0.29)' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1
+v1 SP net8 0
+.save  i(v1)
+XM6 DIFFOUT G2 net1 VSS sky130_fd_pr__nfet_01v8_lvt L=4 W=2 nf=1 ad='W * 0.29' as='W * 0.29' pd='2*(W + 0.29)'
++ ps='2*(W + 0.29)' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1
+v2 SP net7 0
+.save  i(v2)
+v4 net1 VSS 0
+.save  i(v4)
+v6 net6 SP 0
+.save  i(v6)
+XM7 DIFFOUT EN_N VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 ad='W * 0.29' as='W * 0.29' pd='2*(W + 0.29)'
++ ps='2*(W + 0.29)' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1
+XM46 net9 EN_N VCC VCC sky130_fd_pr__pfet_01v8 L=0.15 W=5 nf=1 ad='W * 0.29' as='W * 0.29' pd='W + 2 * 0.29'
++ ps='W + 2 * 0.29' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1
+v17 net9 net3 0
+.save  i(v17)
+XM12 net2 G1 VSS VSS sky130_fd_pr__nfet_01v8_lvt L=4 W=2 nf=1 ad='W * 0.29' as='W * 0.29' pd='2*(W + 0.29)'
++ ps='2*(W + 0.29)' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1
+XM54 net2 net2 net3 VCC sky130_fd_pr__pfet_01v8_lvt L=4 W=4 nf=1 ad='W * 0.29' as='W * 0.29' pd='2*(W + 0.29)'
++ ps='2*(W + 0.29)' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1
+XM5 DIFFOUT net2 net3 VCC sky130_fd_pr__pfet_01v8_lvt L=4 W=4 nf=1 ad='W * 0.29' as='W * 0.29' pd='2*(W + 0.29)'
++ ps='2*(W + 0.29)' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1
+XM8 G1 ADJ net4 VCC sky130_fd_pr__pfet_01v8_lvt L=1 W=1 nf=1 ad='W * 0.29' as='W * 0.29' pd='W + 2 * 0.29'
++ ps='W + 2 * 0.29' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1
+XM9 G1 ADJ net5 VSS sky130_fd_pr__nfet_01v8_lvt L=1 W=0.5 nf=1 ad='W * 0.29' as='W * 0.29' pd='W + 2 * 0.29'
++ ps='W + 2 * 0.29' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1
+XM10 net5 VCC VSS VSS sky130_fd_pr__nfet_01v8_lvt L=8 W=0.5 nf=1 ad='W * 0.29' as='W * 0.29' pd='2*(W + 0.29)'
++ ps='2*(W + 0.29)' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1
+XM1 net4 EN_N VCC VCC sky130_fd_pr__pfet_01v8 L=8 W=1 nf=1 ad='W * 0.29' as='W * 0.29' pd='W + 2 * 0.29'
++ ps='W + 2 * 0.29' nrd=0 nrs=0 sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+.end

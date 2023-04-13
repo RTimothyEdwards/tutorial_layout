@@ -1,0 +1,47 @@
+Files from making a layout from Stefan Schippers's bandgap
+op amp in a video by Matt Venn,  Wednesday, March 29, 2023,
+presented in a webinar on Thursday, April 15, 2023.
+
+Layout by Tim Edwards, Efabless/Open Circuit Design
+All files distributed under the Apache open source license
+(see the LICENSE file for details).
+Copyright 2023 R. Timothy Edwards
+
+-----------------------------------------------------------
+
+These files are being put up in a repository post-webinar
+to share.  The files reflect the completed layout as
+shown at the end of the webinar.
+
+-----------------------------------------------------------
+
+The setup for viewing the schematic requires copying the
+"xschemrc" file from the PDK into the current working
+directory (or providing it on the command line when starting
+xschem).  Likewise, the ".magicrc" file can be copied from
+the PDK into the current working directory or specified on
+the command line (as shown in the webinar video).
+
+-----------------------------------------------------------
+
+This repository contains a convenience script that was not
+used in the webinar, which automatically handles the
+process of generating the netlist from the layout and
+running netgen.  This script assumes the default PDK
+location of /usr/local/share/pdk, but that can be overridden
+by setting the environment variable PDK_ROOT.
+
+-----------------------------------------------------------
+
+Note that as in the webinar, the output netlist from xschem,
+"zero_opamp.spice", has been manually edited to remove all
+of the parasitic capacitances that appear in the schematic
+drawing, as those should not be used for LVS.
+
+-----------------------------------------------------------
+
+Please use netgen version 1.5.252 or better, as the port
+mismatch shown in the webinar is due to a bug when removing
+the zero-volt voltage sources used in the schematic for
+current measurement.
+

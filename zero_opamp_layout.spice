@@ -1,0 +1,61 @@
+* NGSPICE file created from zero_opamp.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_lvt_FMZK9W a_400_n200# a_n458_n200# a_n400_n288# a_n560_n374#
+X0 a_400_n200# a_n400_n288# a_n458_n200# a_n560_n374# sky130_fd_pr__nfet_01v8_lvt ad=0.58 pd=4.58 as=0.58 ps=4.58 w=2 l=4
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_MGSVTJ a_n33_495# w_n211_n684# a_n73_n536# a_15_n536#
+X0 a_15_n536# a_n33_495# a_n73_n536# w_n211_n684# sky130_fd_pr__pfet_01v8 ad=1.45 pd=10.6 as=1.45 ps=10.6 w=5 l=0.15
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_GGMWVD w_n996_n319# a_n800_n197# a_800_n100# a_n858_n100#
+X0 a_800_n100# a_n800_n197# a_n858_n100# w_n996_n319# sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=8
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_lvt_GWPMZG a_n200_n897# a_200_n800# w_n396_n1019#
++ a_n258_n800#
+X0 a_200_n800# a_n200_n897# a_n258_n800# w_n396_n1019# sky130_fd_pr__pfet_01v8_lvt ad=2.32 pd=16.6 as=2.32 ps=16.6 w=8 l=2
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_GGY9VD a_800_n200# a_n858_n200# w_n996_n419# a_n800_n297#
+X0 a_800_n200# a_n800_n297# a_n858_n200# w_n996_n419# sky130_fd_pr__pfet_01v8 ad=0.58 pd=4.58 as=0.58 ps=4.58 w=2 l=8
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_lvt_ZQZ9VD w_n596_n619# a_n400_n497# a_400_n400# a_n458_n400#
+X0 a_400_n400# a_n400_n497# a_n458_n400# w_n596_n619# sky130_fd_pr__pfet_01v8_lvt ad=1.16 pd=8.58 as=1.16 ps=8.58 w=4 l=4
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_L9KS9E a_n73_n81# a_n175_n193# a_n33_41# a_15_n81#
+X0 a_15_n81# a_n33_41# a_n73_n81# a_n175_n193# sky130_fd_pr__nfet_01v8 ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=0.15
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_lvt_FMMQLY a_100_n50# a_n100_n138# a_n260_n224# a_n158_n50#
+X0 a_100_n50# a_n100_n138# a_n158_n50# a_n260_n224# sky130_fd_pr__nfet_01v8_lvt ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=1
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_lvt_3VR9VM w_n296_n319# a_n100_n197# a_100_n100# a_n158_n100#
+X0 a_100_n100# a_n100_n197# a_n158_n100# w_n296_n319# sky130_fd_pr__pfet_01v8_lvt ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=1
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_lvt_FMHZDY a_n800_n138# a_n960_n224# a_n858_n50# a_800_n50#
+X0 a_800_n50# a_n800_n138# a_n858_n50# a_n960_n224# sky130_fd_pr__nfet_01v8_lvt ad=0.145 pd=1.58 as=0.145 ps=1.58 w=0.5 l=8
+.ends
+
+.subckt zero_opamp PLUS MINUS EN_N VSS VCC DIFFOUT ADJ
+XXM12 m1_4962_n90# VSS G1 VSS sky130_fd_pr__nfet_01v8_lvt_FMZK9W
+XXM46 EN_N VCC m1_4960_n440# VCC sky130_fd_pr__pfet_01v8_MGSVTJ
+XXM18 G2 VSS G2 VSS sky130_fd_pr__nfet_01v8_lvt_FMZK9W
+XXM1 VCC EN_N m1_693_n743# VCC sky130_fd_pr__pfet_01v8_GGMWVD
+XXM2 G1 VSS G1 VSS sky130_fd_pr__nfet_01v8_lvt_FMZK9W
+XXM3 MINUS G1 VCC SP sky130_fd_pr__pfet_01v8_lvt_GWPMZG
+XXM4 SP VCC VCC EN_N sky130_fd_pr__pfet_01v8_GGY9VD
+XXM5 VCC m1_4962_n90# DIFFOUT m1_4960_n440# sky130_fd_pr__pfet_01v8_lvt_ZQZ9VD
+XXM6 DIFFOUT VSS G2 VSS sky130_fd_pr__nfet_01v8_lvt_FMZK9W
+XXM7 VSS VSS EN_N DIFFOUT sky130_fd_pr__nfet_01v8_L9KS9E
+XXM9 m1_724_n2032# ADJ VSS G1 sky130_fd_pr__nfet_01v8_lvt_FMMQLY
+XXM8 VCC ADJ m1_693_n743# G1 sky130_fd_pr__pfet_01v8_lvt_3VR9VM
+XXM20 PLUS G2 VCC SP sky130_fd_pr__pfet_01v8_lvt_GWPMZG
+XXM54 VCC m1_4962_n90# m1_4962_n90# m1_4960_n440# sky130_fd_pr__pfet_01v8_lvt_ZQZ9VD
+XXM10 VCC VSS m1_724_n2032# VSS sky130_fd_pr__nfet_01v8_lvt_FMHZDY
+.ends
+
